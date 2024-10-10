@@ -49,9 +49,9 @@ const modules = {
 }
 
 // eager
-import * as __glob__0_0 from './path/to/files/file1.js'
-import * as __glob__0_1 from './path/to/files/file2.js'
-import * as __glob__0_2 from './path/to/files/file3.js'
+import __glob__0_0 from './path/to/files/file1.js'
+import __glob__0_1 from './path/to/files/file2.js'
+import __glob__0_2 from './path/to/files/file3.js'
 const eagerModules =  {
   './path/to/files/file1.js': __glob__0_1,
   './path/to/files/file2.js': __glob__0_2,
