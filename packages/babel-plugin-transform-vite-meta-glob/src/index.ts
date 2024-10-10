@@ -96,12 +96,7 @@ export default function viteMetaGlobBabelPlugin({
 
             const imports = globPaths.map((globPath, idx) => {
               const modulePath = t.stringLiteral(globPath)
-              return t.variableDeclaration('const', [
-                t.variableDeclarator(
-                  identifiers[idx],
-                  t.callExpression(t.identifier('require'), [modulePath])
-                )
-              ])
+              return t.importDeclaration([t.importDefaultSpecifier(identifiers[idx])], modulePath)
             })
 
             const variable = t.variableDeclaration('const', [
